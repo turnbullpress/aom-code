@@ -1,0 +1,4 @@
+# Change to true, to enable carbon-cache on boot
+CARBON_CACHE_ENABLED=true
+RELAY_INSTANCES=1
+CACHE_INSTANCES=2

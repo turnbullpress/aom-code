@@ -1,0 +1,11 @@
+[Unit]
+Description=carbon-relay instance %i (graphite)
+
+[Service]
+ExecStartPre=/bin/rm -f /var/run/carbon-relay-%i.pid
+ExecStart=/usr/bin/carbon-relay --config=/etc/carbon/carbon.conf --pidfile=/var/run/carbon-relay-%i.pid --logdir=/var/log/carbon/ --instance=%i start
+Type=forking
+PIDFile=/var/run/carbon-relay-%i.pid
+
+[Install]
+WantedBy=multi-user.target
