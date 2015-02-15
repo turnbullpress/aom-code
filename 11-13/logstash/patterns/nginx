@@ -1,0 +1,1 @@
+NGINXACCESS %{IPORHOST:remote_addr} - %{USERNAME:remote_user} \[%{HTTPDATE:time_local}\] "%{WORD:http_method} %{URIPATHPARAM:http_request} HTTP/%{NUMBER:http_version}" %{INT:http_status} %{INT:body_bytes_sent} %{QS:http_referer} %{QS:http_user_agent}

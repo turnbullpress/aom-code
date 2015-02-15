@@ -1,0 +1,1 @@
+TORNADOAPI %{TIMESTAMP_ISO8601:app_timestamp} %{URIHOST:app_host} %{DATA:app_severity} %{SYSLOG5424SD} - nil %{DATA:app_request_state} \:%{DATA:app_verb} %{DATA:app_path} for %{URIHOST:app_source} (?:in \(%{INT:app_request_time:int} ms\) Status: %{INT:app_status_code:int}|%{GREEDYDATA:app_request})

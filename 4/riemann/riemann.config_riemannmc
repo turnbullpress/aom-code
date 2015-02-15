@@ -1,0 +1,17 @@
+; -*- mode: clojure; -*-
+; vim: filetype=clojure
+(include "/etc/riemann/include")
+
+(let [index (index)]
+
+  (streams
+    (default :ttl 60
+      ; Index all events immediately.
+      index
+
+      (where (service #"^riemann.*")
+        graph)
+
+      (expired
+        (throttle 1 120
+          (where (service #"^riemann.*") (email "james@example.com")))))))
