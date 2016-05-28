@@ -90,4 +90,4 @@
       web-tier-hosts (webtier)
       app-tier-hosts (apptier)
       db-tier-hosts  (datatier)
-      #(info "Catchall" (:host %)))))
+      #(info "Catchall - no tier defined" (:host %) (:service%)))))
