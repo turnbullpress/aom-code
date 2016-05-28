@@ -1,7 +1,7 @@
 (ns examplecom.app.tornado
   "Monitoring streams for Tornado"
-  (:require [riemann.config :refer :all]
-            [clojure.tools.logging :refer :all]
+  (:require [clojure.tools.logging :refer :all]
+            [riemann.config :refer :all]
             [riemann.folds :as folds]
             [riemann.streams :refer :all]))
 
