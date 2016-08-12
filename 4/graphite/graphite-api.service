@@ -1,0 +1,11 @@
+[Unit]
+Description=graphite-api (graphite)
+
+[Service]
+ExecStartPre=/bin/rm -f /var/run/graphite-api.pid
+ExecStart=/usr/bin/gunicorn --pid /var/run/graphite-api.pid -b 0.0.0.0:8888 -w 2 --daemon graphite_api.app:app
+Type=forking
+PIDFile=/var/run/graphite-api.pid
+
+[Install]
+WantedBy=multi-user.target
