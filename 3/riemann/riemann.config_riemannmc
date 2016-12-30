@@ -21,4 +21,4 @@
       (expired
         (throttle 1 120
           (where (service #"^riemann.*"
-            (email "james@example.com"))))))))
+            (email "james@example.com")))))))
