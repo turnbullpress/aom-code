@@ -26,8 +26,7 @@
    {:service #"^swap/percent-(.*)$" :rewrite "swap $1"}
    {:service #"^memory/percent-(.*)$" :rewrite "memory $1"}
    {:service #"^processes/ps_state-(.*)$" :rewrite "processes $1"}
-   {:service #"^processes-(.*)?/(.*)?/(.*)$" :rewrite "processes $1 $2 $3"}
-   {:service #"^processes-(.*)?/(.*)$" :rewrite "processes $1 $2"}
+   {:service #"^processes-(.*)/(.*)$" :rewrite "processes $1 $2"}
    {:service #"^cpu/percent-(.*)$" :rewrite "cpu $1"}
    {:service #"^df-(.*)/(df_complex|percent_bytes)-(.*)$" :rewrite "df $1 $2 $3"}
    {:service #"^interface-(.*)/if_(errors|packets|octets)/(tx|rx)$" :rewrite "nic $1 $3 $2"}
