@@ -60,7 +60,7 @@
               footer))
           events)))
 
-(def email (mailer {:from "reimann@example.com"
+(def email (mailer {:from "riemann@example.com"
                     :subject (fn [events] (format-subject events))
                     :body (fn [events] (format-body events))
                     }))
